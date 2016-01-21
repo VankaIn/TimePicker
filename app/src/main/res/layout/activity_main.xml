@@ -1,0 +1,97 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEF2F5"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="Adjust the times to set when your C-Sleep bulbs switch between the AM, Day, and PM colors."
+        android:textColor="#8E9BB3"
+        android:textSize="15dp"/>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#999999"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingTop="15dp"
+        android:text="SELECT START TIMES:"
+        android:textColor="#D7D7D7"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="20dp" >
+
+        <TextView
+            android:id="@+id/tv_am"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_blue"
+            android:gravity="center"
+            android:text="4:00 AM"
+            android:textColor="#333333"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/tv_day"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_white"
+            android:gravity="center"
+            android:text="5:00 AM"
+            android:textColor="#333333"
+            android:textSize="18sp"/>
+
+
+        <TextView
+            android:id="@+id/tv_pm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_yellow"
+            android:gravity="center"
+            android:text="6:00 AM"
+            android:textColor="#333333"
+            android:textSize="18sp"/>
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="380dp"
+        android:layout_height="380dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="-10dp"
+        android:background="@mipmap/sun">
+
+        <com.ljj.timepicker.view.FollowTheSunView
+            android:id="@+id/sunTimeView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:outerRadius="130dp"
+            app:paintColor="#444444"
+            app:backgroundColor="#EEF2F5"/>
+
+    </FrameLayout>
+
+</LinearLayout>
